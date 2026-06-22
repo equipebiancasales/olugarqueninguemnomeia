@@ -283,7 +283,7 @@
   .sintoma:hover { background: var(--preto2); }
   .sintoma-num {
     font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 600;
-    color: rgba(255,255,255,0.22); line-height: 1; margin-bottom: 16px;
+    color: rgba(255,255,255,0.4); line-height: 1; margin-bottom: 16px;
   }
   .sintoma-title { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--branco-puro); margin-bottom: 12px; }
   .sintoma-desc { font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--cinza); }
@@ -362,7 +362,7 @@
   .fechamento p { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 4vw, 38px); font-weight: 600; line-height: 1.4; color: var(--branco-puro); margin-bottom: 20px; }
   .fechamento p em { font-style: italic; color: rgba(255,255,255,0.85); }
   .fechamento-assinatura { margin-top: 40px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; font-weight: 400; letter-spacing: 0.3px; text-transform: none; color: rgba(255,255,255,0.6); }
-  .rodape-garantia { margin-top: 20px; font-size: 8px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+  .rodape-garantia { margin-top: 20px; font-size: 8px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
   footer { background: #050505; padding: 32px 24px; text-align: center; font-size: 11px; font-weight: 400; letter-spacing: 1.5px; color: rgba(255,255,255,0.25); border-top: 1px solid var(--linha-sutil); }
 
@@ -430,6 +430,8 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
 
+<main>
+
 <!-- ========== HERO / PRIMEIRA TELA ========== -->
 <section class="hero">
   <div class="hero-grid">
@@ -445,7 +447,7 @@
     </div>
     <div class="hero-media">
       <div class="mockup-box">
-        <img src="images/img-01.jpg" alt="O Lugar Que Ninguém Nomeia — livro digital de Bianca Cardoso Sales" decoding="async">
+        <img src="images/img-01.jpg" alt="O Lugar Que Ninguém Nomeia — livro digital de Bianca Cardoso Sales" width="950" height="633" decoding="async">
       </div>
       <p class="mockup-cap">E-book pronto pra ler no celular, computador e tablet</p>
     </div>
@@ -478,7 +480,7 @@
 
 <!-- MANIFESTO (imagem 1) -->
 <section class="manifesto">
-  <img src="images/img-02.jpg" alt="A dor que ninguém fala não é ir embora. Também não é ficar. É estar no meio." loading="lazy" decoding="async">
+  <img src="images/img-02.jpg" alt="A dor que ninguém fala não é ir embora. Também não é ficar. É estar no meio." width="780" height="1385" loading="lazy" decoding="async">
 </section>
 
 <!-- SINTOMAS -->
@@ -583,10 +585,10 @@
 
     <p class="prints-intro reveal">Mensagens reais de quem leu</p>
     <div class="prints reveal">
-      <div class="print-card"><img src="images/img-03.jpg" alt="Leitora: eu li o livro e parecia que eu estava em todas as histórias" loading="lazy" decoding="async"></div>
-      <div class="print-card"><img src="images/img-04.jpg" alt="Leitora: já li seu livro, é sensacional, revelador" loading="lazy" decoding="async"></div>
-      <div class="print-card"><img src="images/img-05.jpg" alt="Leitora: pela primeira vez entendi que o que eu vivia começou há 40 anos" loading="lazy" decoding="async"></div>
-      <div class="print-card"><img src="images/img-06.jpg" alt="Leitura do dia: obrigada pelo livro" loading="lazy" decoding="async"></div>
+      <div class="print-card"><img src="images/img-03.jpg" alt="Leitora: eu li o livro e parecia que eu estava em todas as histórias" width="540" height="902" loading="lazy" decoding="async"></div>
+      <div class="print-card"><img src="images/img-04.jpg" alt="Leitora: já li seu livro, é sensacional, revelador" width="540" height="312" loading="lazy" decoding="async"></div>
+      <div class="print-card"><img src="images/img-05.jpg" alt="Leitora: pela primeira vez entendi que o que eu vivia começou há 40 anos" width="540" height="229" loading="lazy" decoding="async"></div>
+      <div class="print-card"><img src="images/img-06.jpg" alt="Leitura do dia: obrigada pelo livro" width="540" height="934" loading="lazy" decoding="async"></div>
     </div>
   </div>
 </section>
@@ -595,7 +597,7 @@
 <section class="autora section">
   <div class="section-inner">
     <p class="label reveal">A autora</p>
-    <div class="autora-foto reveal"><img src="images/img-07.jpg" alt="Bianca Cardoso Sales, Mestre em Psicologia" loading="lazy" decoding="async"></div>
+    <div class="autora-foto reveal"><img src="images/img-07.jpg" alt="Bianca Cardoso Sales, Mestre em Psicologia" width="400" height="400" loading="lazy" decoding="async"></div>
     <h2 class="reveal">Bianca Cardoso Sales</h2>
     <p class="reveal">Ela não chegou aqui pelo caminho fácil. Chegou pela dor. Pela noite longa. Pelo chão frio de uma vida que desmoronou enquanto todo mundo achava que estava de pé.</p>
     <p class="reveal">Aos 38 anos tinha tudo que disseram que bastaria. <em>E estava destruída por dentro.</em> Naquela época ninguém falava sobre isso. Então ela calou. E foi adoecendo em silêncio.</p>
@@ -677,6 +679,8 @@
     <p class="fechamento-assinatura reveal">com amor, Bianca</p>
   </div>
 </section>
+
+</main>
 
 <footer>© Bianca Cardoso Sales · @biancacardososales · Todos os direitos reservados</footer>
 
