@@ -29,7 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <style>
   :root {
     --preto: #0A0A0A;
@@ -62,7 +63,7 @@
     background: #fff;
     border-radius: 50%;
     position: fixed; pointer-events: none; z-index: 9999;
-    transition: transform 0.2s ease; transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   .cursor-ring {
     width: 32px; height: 32px;
@@ -204,7 +205,7 @@
     opacity: 0;
     animation: fadeUp 1s ease 0.5s forwards;
   }
-  .mockup-box img {
+  .mockup-box picture, .mockup-box img {
     width: 100%;
     height: auto;
     display: block;
@@ -387,7 +388,7 @@
 
   /* MANIFESTO (imagem com frase) */
   .manifesto { background: #F4F4F4; padding: 60px 24px; display: flex; justify-content: center; border-top: 1px solid var(--linha-sutil); border-bottom: 1px solid var(--linha-sutil); }
-  .manifesto img { width: 100%; height: auto; max-width: 450px; display: block; }
+  .manifesto picture, .manifesto img { width: 100%; height: auto; max-width: 450px; display: block; }
 
   /* TESTE EM DESTAQUE */
   .teste { background: var(--preto); }
@@ -402,7 +403,7 @@
 
   /* FOTO AUTORA */
   .autora-foto { width:170px; height:170px; border-radius:50%; overflow:hidden; border:1px solid var(--linha); margin-bottom:26px; }
-  .autora-foto img { width:100%; height:100%; object-fit:cover; transform:scale(1.08); }
+  .autora-foto picture, .autora-foto img { width:100%; height:100%; display:block; object-fit:cover; transform:scale(1.08); }
 
   /* CTA FIXO (mobile) */
   .sticky-cta { display: none; }
@@ -423,7 +424,7 @@
   .prints { max-width: 620px; margin: 28px auto 0; column-count: 2; column-gap: 14px; }
   @media (max-width:560px){ .prints { column-gap: 10px; } }
   .print-card { break-inside: avoid; margin-bottom: 14px; border:1px solid var(--linha); border-radius:10px; overflow:hidden; }
-  .print-card img { width:100%; height:auto; display: block; }
+  .print-card picture, .print-card img { width:100%; height:auto; display: block; }
 </style>
 </head>
 <body>
@@ -448,7 +449,10 @@
     </div>
     <div class="hero-media">
       <div class="mockup-box">
-        <img src="images/img-01.jpg" alt="O Lugar Que Ninguém Nomeia — livro digital de Bianca Cardoso Sales" width="950" height="633" decoding="async">
+        <picture>
+          <source srcset="images/img-01.webp" type="image/webp">
+          <img src="images/img-01.jpg" alt="O Lugar Que Ninguém Nomeia — livro digital de Bianca Cardoso Sales" width="950" height="633" decoding="async">
+        </picture>
       </div>
       <p class="mockup-cap">E-book pronto pra ler no celular, computador e tablet</p>
     </div>
@@ -481,7 +485,10 @@
 
 <!-- MANIFESTO (imagem 1) -->
 <section class="manifesto">
-  <img src="images/img-02.jpg" alt="A dor que ninguém fala não é ir embora. Também não é ficar. É estar no meio." width="780" height="1385" loading="lazy" decoding="async">
+  <picture>
+    <source srcset="images/img-02.webp" type="image/webp">
+    <img src="images/img-02.jpg" alt="A dor que ninguém fala não é ir embora. Também não é ficar. É estar no meio." width="780" height="1385" loading="lazy" decoding="async">
+  </picture>
 </section>
 
 <!-- SINTOMAS -->
@@ -586,10 +593,10 @@
 
     <p class="prints-intro reveal">Mensagens reais de quem leu</p>
     <div class="prints reveal">
-      <div class="print-card"><img src="images/img-03.jpg" alt="Leitora: eu li o livro e parecia que eu estava em todas as histórias" width="540" height="902" loading="lazy" decoding="async"></div>
-      <div class="print-card"><img src="images/img-04.jpg" alt="Leitora: já li seu livro, é sensacional, revelador" width="540" height="312" loading="lazy" decoding="async"></div>
-      <div class="print-card"><img src="images/img-05.jpg" alt="Leitora: pela primeira vez entendi que o que eu vivia começou há 40 anos" width="540" height="229" loading="lazy" decoding="async"></div>
-      <div class="print-card"><img src="images/img-06.jpg" alt="Leitura do dia: obrigada pelo livro" width="540" height="934" loading="lazy" decoding="async"></div>
+      <div class="print-card"><picture><source srcset="images/img-03.webp" type="image/webp"><img src="images/img-03.jpg" alt="Leitora: eu li o livro e parecia que eu estava em todas as histórias" width="540" height="902" loading="lazy" decoding="async"></picture></div>
+      <div class="print-card"><picture><source srcset="images/img-04.webp" type="image/webp"><img src="images/img-04.jpg" alt="Leitora: já li seu livro, é sensacional, revelador" width="540" height="312" loading="lazy" decoding="async"></picture></div>
+      <div class="print-card"><picture><source srcset="images/img-05.webp" type="image/webp"><img src="images/img-05.jpg" alt="Leitora: pela primeira vez entendi que o que eu vivia começou há 40 anos" width="540" height="229" loading="lazy" decoding="async"></picture></div>
+      <div class="print-card"><picture><source srcset="images/img-06.webp" type="image/webp"><img src="images/img-06.jpg" alt="Leitura do dia: obrigada pelo livro" width="540" height="934" loading="lazy" decoding="async"></picture></div>
     </div>
   </div>
 </section>
@@ -598,7 +605,7 @@
 <section class="autora section">
   <div class="section-inner">
     <p class="label reveal">A autora</p>
-    <div class="autora-foto reveal"><img src="images/img-07.jpg" alt="Bianca Cardoso Sales, Mestre em Psicologia" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="autora-foto reveal"><picture><source srcset="images/img-07.webp" type="image/webp"><img src="images/img-07.jpg" alt="Bianca Cardoso Sales, Mestre em Psicologia" width="400" height="400" loading="lazy" decoding="async"></picture></div>
     <h2 class="reveal">Bianca Cardoso Sales</h2>
     <p class="reveal">Ela não chegou aqui pelo caminho fácil. Chegou pela dor. Pela noite longa. Pelo chão frio de uma vida que desmoronou enquanto todo mundo achava que estava de pé.</p>
     <p class="reveal">Aos 38 anos tinha tudo que disseram que bastaria. <em>E estava destruída por dentro.</em> Naquela época ninguém falava sobre isso. Então ela calou. E foi adoecendo em silêncio.</p>
@@ -701,14 +708,18 @@
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursor-ring');
   let rx = 0, ry = 0;
+  let mx = 0, my = 0;
   document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    rx += (e.clientX - rx) * 0.12;
-    ry += (e.clientY - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
+    mx = e.clientX; my = e.clientY;
+    cursor.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
   });
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateRing);
+  }
+  requestAnimationFrame(animateRing);
 
   function toggleFaq(el) { el.classList.toggle('open'); }
 
